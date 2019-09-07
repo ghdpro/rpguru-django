@@ -1,0 +1,12 @@
+# Python
+*.pyc
+
+# Coverage
+htmlcov/
+.coverage
+
+# Vagrant
+.vagrant/
+
+# Setting Secrets
+settings/secrets.json
