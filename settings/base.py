@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rpguru.core',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +61,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'core.RPGuruUser'
 
 ROOT_URLCONF = 'rpguru.urls'
 WSGI_APPLICATION = 'rpguru.wsgi.application'
