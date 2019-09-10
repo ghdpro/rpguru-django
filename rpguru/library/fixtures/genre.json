@@ -1,0 +1,74 @@
+[
+  {
+    "model": "library.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Action-Adventure",
+      "slug": "action-adventure",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Action",
+      "slug": "action",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Adventure",
+      "slug": "adventure",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 4,
+    "fields": {
+      "name": "Visual Novel",
+      "slug": "visual-novel",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 5,
+    "fields": {
+      "name": "RPG",
+      "slug": "rpg",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 6,
+    "fields": {
+      "name": "Strategy",
+      "slug": "strategy",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 7,
+    "fields": {
+      "name": "Tactical RPG",
+      "slug": "tactical-rpg",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 8,
+    "fields": {
+      "name": "Action RPG",
+      "slug": "action-rpg",
+      "description": ""
+    }
+  }
+]

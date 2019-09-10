@@ -1,7 +1,7 @@
 [
   {
     "model": "core.language",
-    "pk": "ja",
+    "pk": "jp",
     "fields": {
       "name": "Japanese",
       "country_code": "JP"

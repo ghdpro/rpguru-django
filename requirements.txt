@@ -1,3 +1,5 @@
 Django[argon2]==2.2.5
 django-debug-toolbar==2.0
+Pillow==6.1.0
+Markdown==3.1.1
 psycopg2-binary==2.8.3
