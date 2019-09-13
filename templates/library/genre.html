@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ genre.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ genre.name }}</h1>
+
+    {% for game in genre.game_set.all %}
+        {% include 'library/_game.html' with game=game only %}
+    {% endfor %}
+
+{% endblock content %}

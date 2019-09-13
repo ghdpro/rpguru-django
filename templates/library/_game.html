@@ -1,0 +1,26 @@
+<div class="card text-white bg-dark mb-2">
+    <div class="row no-gutters">
+        <div class="col-md-2">
+            <img src="{{ game.artwork.url }}" class="card-img" style="height: 250px; object-fit: cover" alt="{{ game.title }}">
+        </div>
+        <div class="col-md-10">
+            <div class="card-body">
+                <h5 class="card-title">{{ game.title }}</h5>
+                <ul class="list-group list-group-horizontal-sm mb-2">
+                    <li class="list-group-item text-white bg-dark p-2">{{ game.jp_date }}</li>
+                    <li class="list-group-item text-white bg-dark p-2">{{ game.na_date }}</li>
+                    <li class="list-group-item text-white bg-dark p-2">{{ game.eu_date }}</li>
+                    <li class="list-group-item text-white bg-dark p-2">{% for platform in game.platform.all %}<a href="{% url 'platform' platform.slug %}">{{ platform.short }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                </ul>
+                <ul class="list-group list-group-horizontal-sm mb-2">
+                    <li class="list-group-item text-white bg-dark p-2"><i class="fas fa-microphone"></i> {% for audio in game.audio.all %}{{ audio.pk|upper }}{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                    <li class="list-group-item text-white bg-dark p-2">{% if game.franchise_main %}<a href="{% url 'franchise' game.franchise_main.slug %}">{{ game.franchise_main.name }}</a>{% else %}{{ game.franchise_side.name }}{% endif %}</li>
+                    <li class="list-group-item text-white bg-dark p-2">{% for genre in game.genre.all %}<a href="{% url 'genre' genre.slug %}">{{ genre.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                    <li class="list-group-item text-white bg-dark p-2"><i class="fas fa-wrench"></i> {% for developer in game.developer.all %}<a href="{% url 'company' developer.slug %}">{{ developer.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                    <li class="list-group-item text-white bg-dark p-2"><i class="fas fa-shopping-cart"></i> {% for publisher in game.publisher.all %}<a href="{% url 'company' publisher.slug %}">{{ publisher.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</li>
+                </ul>
+                <p class="card-text">{{ game.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,7 +16,8 @@ def artwork_upload_location(instance, filename):
 class Platform(models.Model):
     name = models.CharField('name', max_length=250)
     slug = models.SlugField(max_length=100, unique=True)
-    artwork = models.ImageField(upload_to=artwork_upload_location)
+    short = models.CharField('short name', max_length=100)
+    artwork = models.ImageField(upload_to=artwork_upload_location, blank=True)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -26,7 +27,7 @@ class Platform(models.Model):
 class Franchise(models.Model):
     name = models.CharField('name', max_length=250)
     slug = models.SlugField(max_length=100, unique=True)
-    artwork = models.ImageField(upload_to=artwork_upload_location)
+    artwork = models.ImageField(upload_to=artwork_upload_location, blank=True)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -36,7 +37,7 @@ class Franchise(models.Model):
 class Company(models.Model):
     name = models.CharField('name', max_length=250)
     slug = models.SlugField(max_length=100, unique=True)
-    artwork = models.ImageField(upload_to=artwork_upload_location)
+    artwork = models.ImageField(upload_to=artwork_upload_location, blank=True)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -66,7 +67,7 @@ class Game(models.Model):
             (BAD, 'Bad')
         )
     title = models.CharField('title', max_length=250)
-    artwork = models.ImageField(upload_to=artwork_upload_location)
+    artwork = models.ImageField(upload_to=artwork_upload_location, blank=True)
     jp_date = models.DateField('Japanese Release Date', null=True, blank=True)
     na_date = models.DateField('North America Release Date', null=True, blank=True)
     eu_date = models.DateField('Europe Release Date', null=True, blank=True)

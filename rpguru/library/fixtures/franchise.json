@@ -1,0 +1,162 @@
+[
+  {
+    "model": "library.franchise",
+    "pk": 1,
+    "fields": {
+      "name": "Final Fantasy",
+      "slug": "final-fantasy",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 2,
+    "fields": {
+      "name": "Dragon Quest",
+      "slug": "dragon-quest",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 3,
+    "fields": {
+      "name": "Fire Emblem",
+      "slug": "fire-emblem",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 4,
+    "fields": {
+      "name": "Ys",
+      "slug": "ys",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 5,
+    "fields": {
+      "name": "Disgaea",
+      "slug": "disgaea",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 6,
+    "fields": {
+      "name": "Tales",
+      "slug": "tales",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 7,
+    "fields": {
+      "name": "Xeno",
+      "slug": "xeno",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 8,
+    "fields": {
+      "name": "Atelier",
+      "slug": "atelier",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 9,
+    "fields": {
+      "name": "Yakuza",
+      "slug": "yakuza",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 10,
+    "fields": {
+      "name": "Star Ocean",
+      "slug": "star-ocean",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 11,
+    "fields": {
+      "name": "Sakura Wars",
+      "slug": "sakura-wars",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 12,
+    "fields": {
+      "name": "Valkyria Chronicles",
+      "slug": "valkyria-chronicles",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 13,
+    "fields": {
+      "name": "Grandia",
+      "slug": "grandia",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 14,
+    "fields": {
+      "name": "Hyperdimension Neptunia",
+      "slug": "hyperdimension-neptunia",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 15,
+    "fields": {
+      "name": ".hack",
+      "slug": "hack",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.franchise",
+    "pk": 16,
+    "fields": {
+      "name": "Rune Factory",
+      "slug": "rune-factory",
+      "artwork": "",
+      "description": ""
+    }
+  }
+]

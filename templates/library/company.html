@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ company.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ company.name }}</h1>
+
+    {% for game in company.developer.all %}
+        {% include 'library/_game.html' with game=game only %}
+    {% endfor %}
+
+{% endblock content %}

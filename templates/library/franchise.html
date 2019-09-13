@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ franchise.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ franchise.name }}</h1>
+
+    {% for game in franchise.main.all %}
+        {% include 'library/_game.html' with game=game only %}
+    {% endfor %}
+
+{% endblock content %}

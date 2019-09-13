@@ -1,0 +1,145 @@
+[
+  {
+    "model": "library.platform",
+    "pk": 1,
+    "fields": {
+      "name": "PlayStation 4",
+      "slug": "ps4",
+      "short": "PS4",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 2,
+    "fields": {
+      "name": "Nintendo Switch",
+      "slug": "switch",
+      "short": "Switch",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 3,
+    "fields": {
+      "name": "Xbox One",
+      "slug": "xbox-one",
+      "short": "Xbox One",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 4,
+    "fields": {
+      "name": "PlayStation 3",
+      "slug": "ps3",
+      "short": "PS3",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 5,
+    "fields": {
+      "name": "PlayStation 2",
+      "slug": "ps2",
+      "short": "PS2",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 6,
+    "fields": {
+      "name": "PlayStation Vita",
+      "slug": "vita",
+      "short": "Vita",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 7,
+    "fields": {
+      "name": "PlayStation Portable",
+      "slug": "psp",
+      "short": "PSP",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 8,
+    "fields": {
+      "name": "Nintendo Wii",
+      "slug": "wii",
+      "short": "Wii",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 9,
+    "fields": {
+      "name": "Nintendo Wii-U",
+      "slug": "wii-u",
+      "short": "Wii-U",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 10,
+    "fields": {
+      "name": "Nintendo 3DS",
+      "slug": "3ds",
+      "short": "3DS",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 11,
+    "fields": {
+      "name": "Nintendo DS",
+      "slug": "ds",
+      "short": "DS",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 12,
+    "fields": {
+      "name": "Xbox 360",
+      "slug": "xbox-360",
+      "short": "Xbox 360",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 13,
+    "fields": {
+      "name": "PC",
+      "slug": "pc",
+      "short": "PC",
+      "artwork": "",
+      "description": ""
+    }
+  }
+]
