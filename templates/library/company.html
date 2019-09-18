@@ -1,12 +1,21 @@
 {% extends "base.html" %}
+{% load markdownify %}
 
 {% block head_title %}{{ company.name }}{% endblock %}
 
 {% block content %}
     <h1>{{ company.name }}</h1>
+    {{ description|markdownify }}
 
-    {% for game in company.developer.all %}
+    <h3 class="text-center">Games developed by {{ company.name }}</h3>
+    {% for game in developed %}
         {% include 'library/_game.html' with game=game only %}
     {% endfor %}
+
+    <h3 class="text-center">Games published by {{ company.name }}</h3>
+    {% for game in published %}
+        {% include 'library/_game.html' with game=game only %}
+    {% endfor %}
+    <p class="text-center"><i>To keep the size of this page down, this list doesn't include games where {{ company.name }} was also the developer of the game.</i></>
 
 {% endblock content %}

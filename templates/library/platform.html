@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% load markdownify %}
 
 {% block head_title %}{{ platform.name }}{% endblock %}
 
 {% block content %}
     <h1>{{ platform.name }}</h1>
+    {{ description|markdownify }}
 
-    {% for game in platform.game_set.all %}
+    {% for game in games %}
         {% include 'library/_game.html' with game=game only %}
     {% endfor %}
 

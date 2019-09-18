@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load markdownify %}
 
 {% block head_title %}{{ franchise.name }}{% endblock %}
 
 {% block content %}
     <h1>{{ franchise.name }}</h1>
+    {{ description|markdownify }}
 
-    {% for game in franchise.main.all %}
+    <h3 class="text-center">Main Games</h3>
+    {% for game in main %}
         {% include 'library/_game.html' with game=game only %}
     {% endfor %}
 

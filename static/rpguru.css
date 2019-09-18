@@ -1,8 +1,3 @@
-body {
-    background-color: #202020;
-    color: #C0C0C0;
-}
-
 h1 { font-size: 2rem; }
 h2 { font-size: 1.75rem; }
 h3 { font-size: 1.5rem; }
@@ -14,8 +9,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .rpguru-logo {
-    background: #004020;
-    border-bottom: solid 1px #002000;
+}
+
+.rpguru-data {
+    font-size: 95%;
 }
 
 .navbar {
@@ -28,7 +25,4 @@ h1, h2, h3, h4, h5 {
 main.container {
     padding: 0.5rem 1rem;
     margin-top: 1rem;
-}
-footer.container, footer.container a:link, footer.container a:active, footer.container a:visited {
-    color: #707070;
 }
