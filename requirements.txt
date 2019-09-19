@@ -4,4 +4,5 @@ django-markdownify==0.8.0
 Pillow==6.1.0
 Markdown==3.1.1
 bleach==3.1.0
+fabric==2.5.0
 psycopg2-binary==2.8.3

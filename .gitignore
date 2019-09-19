@@ -10,3 +10,6 @@ htmlcov/
 
 # Setting Secrets
 settings/secrets.json
+
+# Commit ID
+templates/id.html
