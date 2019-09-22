@@ -5,7 +5,12 @@ from datetime import datetime
 
 from fabric import task
 
-hosts = ['rpguru@staging.visei.net', ]
+# Load secrets from JSON file
+import json
+secrets = json.loads(open(os.path.join(os.path.dirname(__file__), 'settings/secrets.json')).read())
+
+
+hosts = secrets['fabric_hosts']
 repository = 'https://github.com/ghdpro/rpguru.git'
 user = 'rpguru'
 home = f'/home/{user}'
@@ -30,7 +35,17 @@ def init(c):
     """Initializes project"""
     rev = 'current'
     c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
-          f'/current/ && python3 manage.py migrate --settings=settings.staging', echo=True)
+          f'/{rev}/ && python3 manage.py migrate --settings=settings.staging', echo=True)
+    c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
+          f'/{rev}/ && python3 manage.py loaddata language --settings=settings.staging', echo=True)
+    c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
+          f'/{rev}/ && python3 manage.py loaddata company --settings=settings.staging', echo=True)
+    c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
+          f'/{rev}/ && python3 manage.py loaddata franchise --settings=settings.staging', echo=True)
+    c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
+          f'/{rev}/ && python3 manage.py loaddata genre --settings=settings.staging', echo=True)
+    c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
+          f'/{rev}/ && python3 manage.py loaddata platform --settings=settings.staging', echo=True)
 
 
 def _clone(c, rev):
@@ -38,6 +53,8 @@ def _clone(c, rev):
     c.run(f'mkdir -p {builds}', echo=True)
     c.run(f'cd {builds} && rm -r -f {rev}', echo=True)
     c.run(f'cd {builds} && git clone {repository} {rev}', echo=True)
+    # Create symlink for secrets.json
+    c.run(f'cd {builds}/{rev}/settings/ && ln -s {home}/secrets.json secrets.json ', echo=True)
 
 
 def _venv(c, rev):
@@ -53,23 +70,23 @@ def _venv(c, rev):
 def _migrate(c, rev):
     # Collect static files
     c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
-          f'/current/ && python3 manage.py collectstatic --clear --no-input --settings=settings.staging', echo=True)
+          f'/{rev}/ && python3 manage.py collectstatic --clear --no-input --settings=settings.staging', echo=True)
     # Run migrations
     c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
-          f'/current/ && python3 manage.py migrate --settings=settings.staging', echo=True)
+          f'/{rev}/ && python3 manage.py migrate --settings=settings.staging', echo=True)
     # Run tests
     c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
-          f'/current/ && python3 manage.py test --settings=settings.staging', echo=True)
+          f'/{rev}/ && python3 manage.py test --settings=settings.staging', echo=True)
     # Run check
     c.run(f'source {venv}/{rev}/bin/activate && cd {builds}'
-          f'/current/ && python3 manage.py check --settings=settings.staging', echo=True)
+          f'/{rev}/ && python3 manage.py check --settings=settings.staging', echo=True)
 
 
 def _update_symlinks(c, rev):
     """Updates 'current' symlinks"""
-    c.run(f'cd {builds} && rm -r -f {rev}', echo=True)
+    c.run(f'cd {builds} && rm -r -f current', echo=True)
     c.run(f'cd {builds} && ln -s {rev} current', echo=True)
-    c.run(f'cd {venv} && rm -r -f {rev}', echo=True)
+    c.run(f'cd {venv} && rm -r -f current', echo=True)
     c.run(f'cd {venv} && ln -s {rev} current', echo=True)
 
 
