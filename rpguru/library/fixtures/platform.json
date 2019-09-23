@@ -58,6 +58,17 @@
     "model": "library.platform",
     "pk": 6,
     "fields": {
+      "name": "PlayStation 2",
+      "slug": "ps2",
+      "short": "PS2",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 7,
+    "fields": {
       "name": "PlayStation 3",
       "slug": "ps3",
       "short": "PS3",
@@ -67,7 +78,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 7,
+    "pk": 8,
     "fields": {
       "name": "PlayStation Portable",
       "slug": "psp",
@@ -78,7 +89,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 8,
+    "pk": 9,
     "fields": {
       "name": "PlayStation Vita",
       "slug": "vita",
@@ -89,7 +100,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 9,
+    "pk": 10,
     "fields": {
       "name": "GameCube",
       "slug": "gamecube",
@@ -100,7 +111,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 10,
+    "pk": 11,
     "fields": {
       "name": "Wii",
       "slug": "wii",
@@ -111,7 +122,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 11,
+    "pk": 12,
     "fields": {
       "name": "Wii-U",
       "slug": "wii-u",
@@ -122,7 +133,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 12,
+    "pk": 13,
     "fields": {
       "name": "Nintendo DS",
       "slug": "nds",
@@ -133,7 +144,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 13,
+    "pk": 14,
     "fields": {
       "name": "Nintendo 3DS",
       "slug": "3ds",
@@ -144,7 +155,7 @@
   },
   {
     "model": "library.platform",
-    "pk": 14,
+    "pk": 15,
     "fields": {
       "name": "Xbox 360",
       "slug": "xbox-360",
