@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#073642">
+    <meta name="msapplication-TileColor" content="#073642">
+    <meta name="theme-color" content="#073642">
     {% block head %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css"  integrity="sha384-8nq3OiMMgrVFAHyRMMO+DTfMEciSY+c3Awhj/5ljQ1xck1Uv2BUtMjsjLD8GT5Er" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -17,13 +24,14 @@
 {% include '_nav.html' %}
 
 <main class="container rounded">
+    <div class="alert alert-warning"><b>Note!</b> This site is still under construction. Consider the content of various pages not yet final.</div>
     {% block content %}
     {% endblock content %}
 </main>
 
 <footer class="container rounded-bottom text-center">
     <small>Copyright &copy; {% now "Y" %} RPGuru.com - {% include 'id.html' %}</small><br />
-    <small>Disclaimer about trademarks.</small>
+    <small>This website is not affiliated with any video game company. All trademarks are owned by their respective holders.</small>
 </footer>
 
 {% block javascript %}

@@ -36,9 +36,9 @@
     "model": "library.platform",
     "pk": 4,
     "fields": {
-      "name": "PlayStation 3",
-      "slug": "ps3",
-      "short": "PS3",
+      "name": "PC",
+      "slug": "pc",
+      "short": "PC",
       "artwork": "",
       "description": ""
     }
@@ -47,9 +47,9 @@
     "model": "library.platform",
     "pk": 5,
     "fields": {
-      "name": "PlayStation 2",
-      "slug": "ps2",
-      "short": "PS2",
+      "name": "PlayStation",
+      "slug": "psx",
+      "short": "PS1",
       "artwork": "",
       "description": ""
     }
@@ -58,9 +58,9 @@
     "model": "library.platform",
     "pk": 6,
     "fields": {
-      "name": "PlayStation Vita",
-      "slug": "vita",
-      "short": "Vita",
+      "name": "PlayStation 3",
+      "slug": "ps3",
+      "short": "PS3",
       "artwork": "",
       "description": ""
     }
@@ -80,9 +80,9 @@
     "model": "library.platform",
     "pk": 8,
     "fields": {
-      "name": "Nintendo Wii",
-      "slug": "wii",
-      "short": "Wii",
+      "name": "PlayStation Vita",
+      "slug": "vita",
+      "short": "Vita",
       "artwork": "",
       "description": ""
     }
@@ -91,7 +91,29 @@
     "model": "library.platform",
     "pk": 9,
     "fields": {
-      "name": "Nintendo Wii-U",
+      "name": "GameCube",
+      "slug": "gamecube",
+      "short": "GC",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 10,
+    "fields": {
+      "name": "Wii",
+      "slug": "wii",
+      "short": "Wii",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 11,
+    "fields": {
+      "name": "Wii-U",
       "slug": "wii-u",
       "short": "Wii-U",
       "artwork": "",
@@ -100,7 +122,18 @@
   },
   {
     "model": "library.platform",
-    "pk": 10,
+    "pk": 12,
+    "fields": {
+      "name": "Nintendo DS",
+      "slug": "nds",
+      "short": "DS",
+      "artwork": "",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.platform",
+    "pk": 13,
     "fields": {
       "name": "Nintendo 3DS",
       "slug": "3ds",
@@ -111,33 +144,11 @@
   },
   {
     "model": "library.platform",
-    "pk": 11,
-    "fields": {
-      "name": "Nintendo DS",
-      "slug": "ds",
-      "short": "DS",
-      "artwork": "",
-      "description": ""
-    }
-  },
-  {
-    "model": "library.platform",
-    "pk": 12,
+    "pk": 14,
     "fields": {
       "name": "Xbox 360",
       "slug": "xbox-360",
       "short": "Xbox 360",
-      "artwork": "",
-      "description": ""
-    }
-  },
-  {
-    "model": "library.platform",
-    "pk": 13,
-    "fields": {
-      "name": "PC",
-      "slug": "pc",
-      "short": "PC",
       "artwork": "",
       "description": ""
     }
