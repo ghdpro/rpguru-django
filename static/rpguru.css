@@ -15,6 +15,16 @@ h1, h2, h3, h4, h5 {
     font-size: 95%;
 }
 
+.verdict-good {
+    color: #28A745;
+}
+.verdict-okay {
+    color: #CB4B16;
+}
+.verdict-bad {
+    color: #DC3545;
+}
+
 .navbar {
     padding: 0.2rem;
 }

@@ -4,8 +4,15 @@
             <img src="{{ game.artwork.url }}" class="card-img" style="height: 250px; object-fit: cover" alt="{{ game.title }}">
         </div>
         <div class="col-md-10">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <h3 class="card-title mb-0">{{ game.title }}</h3>
+                {% if game.verdict == game.Verdict.GOOD %}
+                    <i class="far fa-check-circle verdict-good" title="Verdict: Good"></i>
+                {% elif game.verdict == game.Verdict.OKAY %}
+                    <i class="far fa-exclamation-triangle verdict-okay" title="Verdict: Okay?"></i>
+                {% else %}
+                    <i class="far fa-times-circle verdict-bad" title="Verdict: Bad"></i>
+                {% endif %}
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-horizontal-xl mb-2 rpguru-data">
