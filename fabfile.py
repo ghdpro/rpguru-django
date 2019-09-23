@@ -58,6 +58,8 @@ def _clone(c, rev):
     c.run(f'cd {builds} && git clone {repository} {rev}', echo=True)
     # Create symlink for secrets.json
     c.run(f'cd {builds}/{rev}/settings/ && ln -s {home}/secrets.json secrets.json ', echo=True)
+    # Upload Google Analytics Code
+    c.put('templates/analytics.html', f'{builds}/{rev}/templates/')
 
 
 def _venv(c, rev):

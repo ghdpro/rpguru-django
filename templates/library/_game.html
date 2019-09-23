@@ -7,11 +7,11 @@
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h3 class="card-title mb-0">{{ game.title }}</h3>
                 {% if game.verdict == game.Verdict.GOOD %}
-                    <i class="far fa-check-circle verdict-good" title="Verdict: Good"></i>
+                    <i class="far fa-check-circle verdict-good" title="Good! Dual audio!"></i>
                 {% elif game.verdict == game.Verdict.OKAY %}
-                    <i class="fas fa-exclamation-triangle verdict-okay" title="Verdict: Okay?"></i>
+                    <i class="fas fa-exclamation-triangle verdict-okay" title="Caution!"></i>
                 {% else %}
-                    <i class="far fa-times-circle verdict-bad" title="Verdict: Bad"></i>
+                    <i class="far fa-times-circle verdict-bad" title="No dual audio"></i>
                 {% endif %}
             </div>
             <div class="card-body">

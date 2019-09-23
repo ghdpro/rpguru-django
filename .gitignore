@@ -13,3 +13,6 @@ settings/secrets.json
 
 # Commit ID
 templates/id.html
+
+# Google Analytics Code
+templates/analytics.html
