@@ -1,4 +1,4 @@
-{% load staticfiles %}<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
     {% endblock content %}
 </main>
 
-<footer class="container rounded-bottom text-center">
+<footer class="container rounded-bottom text-center mb-3">
     <small>Copyright &copy; {% now "Y" %} RPGuru.com - {% include 'id.html' %}</small><br />
     <small>This website is not affiliated with any video game company. All trademarks are owned by their respective holders.</small>
 </footer>

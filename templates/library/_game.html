@@ -15,32 +15,34 @@
                 {% endif %}
             </div>
             <div class="card-body">
-                <ul class="list-group list-group-horizontal-xl mb-2 rpguru-data">
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Japanese Release Date">
+                <ul class="list-group list-group-horizontal-lg rpguru-data">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Japanese Release Date">
                         <span class="flag-icon flag-icon-jp"></span> <span class="text-nowrap">{{ game.jp_date }}</span>
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="North American Release Date">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="North American Release Date">
                         <span class="flag-icon flag-icon-us"></span> <span class="text-nowrap">{{ game.na_date }}</span>
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="European Release Date">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="European Release Date">
                         <span class="flag-icon flag-icon-eu"></span> <span class="text-nowrap">{{ game.eu_date }}</span>
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Platform">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Platform">
                         {% for platform in game.platform.all %}<a href="{% url 'platform' platform.slug %}">{{ platform.short }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Voice Languages">
+                </ul>
+                <ul class="list-group list-group-horizontal-lg mb-2 rpguru-data">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Voice Languages">
                         <i class="fas fa-microphone"></i> {% for audio in game.audio.all %}{{ audio.pk|upper }}{% if not forloop.last %}, {% endif %}{% endfor %}
                     </li>
-                    <li class="list-group-item text-white bg-dark  py-1 px-2" data-toggle="tooltip" data-placement="left" title="Franchise">
+                    <li class="list-group-item flex-fill text-white bg-dark  py-1 px-2" data-toggle="tooltip" data-placement="left" title="Franchise">
                         {% if game.franchise_main %}<a href="{% url 'franchise' game.franchise_main.slug %}" class="text-nowrap">{{ game.franchise_main.name }}</a>{% else %}{{ game.franchise_side.name }}{% endif %}
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Genre">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Genre">
                         {% for genre in game.genre.all %}<a href="{% url 'genre' genre.slug %}">{{ genre.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Developer">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Developer">
                         <i class="fas fa-wrench"></i> {% for developer in game.developer.all %}<a href="{% url 'company' developer.slug %}" class="text-nowrap">{{ developer.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}
                     </li>
-                    <li class="list-group-item text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Publisher">
+                    <li class="list-group-item flex-fill text-white bg-dark py-1 px-2" data-toggle="tooltip" data-placement="left" title="Publisher">
                         <i class="fas fa-shopping-cart"></i> {% for publisher in game.publisher.all %}<a href="{% url 'company' publisher.slug %}" class="text-nowrap">{{ publisher.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}
                     </li>
                 </ul>
